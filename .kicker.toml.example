@@ -1,0 +1,10 @@
+name = "nginx"
+description = "nginx service"
+start = "nginx -g daemon off"
+
+[file]
+  '/etc/nginx/config/htpasswd' = "{{site-htpasswd}}"
+  '/etc/nginx/cert/site1.cert' = "{{site1-cert}}"
+  '/etc/nginx/cert/site1.key' = "{{site1-key}}"
+  '/etc/nginx/cert/site2.cert' = "{{site2-cert}}"
+  '/etc/nginx/cert/site2.key' = "{{site2-key}}"
